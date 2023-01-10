@@ -1,6 +1,0 @@
-[submodule "T3D/dependencies/glm"]
-	path = T3D/dependencies/glm
-	url = https://github.com/g-truc/glm
-[submodule "T3D/dependencies/stb"]
-	path = T3D/dependencies/stb
-	url = https://github.com/nothings/stb
