@@ -3,7 +3,7 @@ include_directories(${TechnicCraft_SOURCE_DIR}/T3D/include)
 add_library(
         T3D
         ${TechnicCraft_SOURCE_DIR}/T3D/dependencies/glad/src/glad.c
-
+        openGl/VertexBuffer.cpp
 )
 
 find_package(OpenGL REQUIRED)
