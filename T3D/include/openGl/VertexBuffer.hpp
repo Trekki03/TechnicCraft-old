@@ -3,7 +3,7 @@
 #define TECHNICCRAFT_VERTEXBUFFER_HPP
 
 #include "OpenGlObject.hpp"
-#include "glad/glad.h"
+#include <glad/glad.h>
 
 namespace T3D
 {
