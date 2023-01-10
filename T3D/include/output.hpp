@@ -1,0 +1,6 @@
+
+#ifndef TECHNICCRAFT_OUTPUT_HPP
+#define TECHNICCRAFT_OUTPUT_HPP
+
+void output();
+#endif //TECHNICCRAFT_OUTPUT_HPP

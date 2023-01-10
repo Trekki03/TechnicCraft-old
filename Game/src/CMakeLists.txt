@@ -1,0 +1,5 @@
+include_directories(${TechnicCraft_SOURCE_DIR}/Game/include)
+include_directories(${TechnicCraft_SOURCE_DIR}/T3D/include)
+link_directories(${TechnicCraft_SOURCE_DIR}/T3D/src)
+add_executable(Game main.cpp)
+target_link_libraries(Game T3D)
