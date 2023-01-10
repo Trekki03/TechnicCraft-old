@@ -26,7 +26,7 @@ if(APPLE)
     find_library(COCOA_LIBRARY Cocoa)
     find_library(IOKIT_LIBRARY IOKit)
     target_link_libraries(
-            T3D
+            T3D PUBLIC
             ${COCOA_LIBRARY}
             ${IOKIT_LIBRARY}
     )
