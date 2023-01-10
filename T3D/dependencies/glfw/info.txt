@@ -1,0 +1,9 @@
+glfw library folder:
+
+----------------------
+
+sub dictionaries:
+- include
+    - GLFW
+- lib
+    - libglfw3.a

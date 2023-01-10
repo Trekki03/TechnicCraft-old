@@ -1,0 +1,16 @@
+glad library folder:
+
+- Language C/C++
+- API Version >= 3.3
+- Core Profile
+- Generate a loader
+
+---------------------------
+
+sub dictionaries:
+- include
+    - glad
+    - KHR
+
+- src
+    - glad.c
