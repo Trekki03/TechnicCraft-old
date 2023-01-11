@@ -8,7 +8,7 @@ add_library(
 
 target_include_directories(T3D PUBLIC ${TechnicCraft_SOURCE_DIR}/T3D/include)
 
-find_package(openGlObjects REQUIRED)
+find_package(OpenGL REQUIRED)
 
 include_directories(
         ${OPENGL_INCLUDE_DIRS}
