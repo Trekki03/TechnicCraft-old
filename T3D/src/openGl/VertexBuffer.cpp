@@ -1,5 +1,5 @@
 
-#include "openGl/VertexBuffer.hpp"
+#include "openGlObjects/VertexBuffer.hpp"
 
 namespace T3D
 {

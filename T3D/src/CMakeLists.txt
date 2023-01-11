@@ -1,10 +1,12 @@
-include_directories(${TechnicCraft_SOURCE_DIR}/T3D/include)
+include_directories(T3D ${TechnicCraft_SOURCE_DIR}/T3D/include)
 
 add_library(
         T3D
         openGl/VertexBuffer.cpp
 
 )
+
+target_include_directories(T3D PUBLIC ${TechnicCraft_SOURCE_DIR}/T3D/include)
 
 find_package(OpenGL REQUIRED)
 
