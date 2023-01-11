@@ -26,5 +26,11 @@ jobs:
     - name: Packages
       run: sudo apt-get install -y mesa-utils libegl1-mesa xvfb
     
-    - name: X11
-      run: export DISPLAY=:99.0 && Xvfb :99 -screen 0 640x480x24 & && glxinfo
+    - name: X11_1
+      run: export DISPLAY=:99.0 
+
+    - name: X11_2
+      run: Xvfb :99 -screen 0 640x480x24 &
+      
+    - name: X11_3
+      run: glxinfo
