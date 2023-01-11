@@ -13,8 +13,14 @@ namespace T3D
     public:
         VertexBuffer(const void* dataArray, uint32_t size, GLenum usage);
         ~VertexBuffer();
-        virtual void Bind() const override;
-        virtual inline void Unbind() const override;
+        inline void Bind() const override
+        {
+            glBindBuffer(GL_ARRAY_BUFFER, _objectID);
+        }
+        inline void Unbind() const override
+        {
+            glBindBuffer(GL_ARRAY_BUFFER, 0);
+        }
     };
 
 } // T3D

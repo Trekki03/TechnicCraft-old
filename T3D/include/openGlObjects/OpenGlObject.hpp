@@ -12,8 +12,9 @@ namespace T3D
     protected:
         uint32_t _objectID;
     public:
-        virtual void Bind() const = 0;
+        virtual inline void Bind() const = 0;
         virtual inline void Unbind() const = 0;
+        inline uint32_t GetObjectId() const {return _objectID;}
     };
 
 } // T3D
