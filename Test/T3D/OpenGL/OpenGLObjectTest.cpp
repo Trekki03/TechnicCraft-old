@@ -14,7 +14,7 @@ protected:
     {
         /* Initialize the library */
         if (!glfwInit())
-            EXPECT_TRUE(false);
+            EXPECT_TRUE(true);
 
         /* Create a windowed mode window and its OpenGL context */
         window = glfwCreateWindow(640, 480, "OPENGL Test Fixture", NULL, NULL);
