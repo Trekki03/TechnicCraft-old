@@ -3,5 +3,8 @@ project(TechnicCraft)
 
 set(CMAKE_CXX_STANDARD 23)
 
+enable_testing()
+
 add_subdirectory(T3D)
 add_subdirectory(Game)
+add_subdirectory(Test)
