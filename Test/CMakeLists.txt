@@ -1,6 +1,10 @@
 
 add_subdirectory(dependencies)
-add_executable(Test ExampleTest.cpp)
-target_link_libraries(Test PUBLIC gtest_main)
 
-add_test(NAME Test COMMAND Test)
+
+add_executable(T3D_TEST T3D/OpenGL/OpenGLObjectTest.cpp)
+
+target_link_libraries(T3D_TEST PUBLIC gtest_main T3D)
+
+add_test(NAME T3D_TEST COMMAND T3D_TEST)
+

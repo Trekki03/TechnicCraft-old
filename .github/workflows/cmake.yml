@@ -1,4 +1,4 @@
-name: CMake
+name: CI
 
 on:
   push:
@@ -20,28 +20,37 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Setup OpenGL
-      uses: openrndr/setup-opengl@v1.1
-
-    - name: Setup OpenGL
-      uses: openrndr/setup-opengl@v1.1
-    
-    - name: Install RandR
-      run: sudo apt-get update && sudo apt-get install xorg-dev
+    - name: Apt Get Update
+      run: sudo apt-get update
       
-
+    - name: Package
+      run: sudo apt-get install xorg-dev
+      
+    - name: Test glxinfo
+      run: |
+        sudo apt-get install -y mesa-utils xvfb
+        xvfb-run glxinfo
+    
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
-      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+      run: xvfb-run cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
     - name: Build
       # Build your program with the given configuration
-      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+      run: xvfb-run cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
     - name: Test
       working-directory: ${{github.workspace}}/build
       # Execute tests defined by the CMake configuration.
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
-      run: ctest -C ${{env.BUILD_TYPE}}
-
+      run: xvfb-run ctest -C ${{env.BUILD_TYPE}}
+        
+    - name: Read Test Log
+      id: log
+      uses: juliangruber/read-file-action@v1
+      with:
+        path: /home/runner/work/TechnicCraft/TechnicCraft/build/Testing/Temporary/LastTest.log
+        
+    - name: Echo package.json
+      run: echo "${{ steps.log.outputs.content }}"
