@@ -28,7 +28,7 @@ jobs:
     - run: xvfb-run glxinfo
     
     - name: Install RandR
-      run: sudo apt-get install xorg-dev
+      run: sudo apt-get install xorg-dev libgl1-mesa-dev
       
 
     - name: Configure CMake
