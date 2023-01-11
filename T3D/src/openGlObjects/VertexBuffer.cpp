@@ -16,14 +16,4 @@ namespace T3D
         VertexBuffer::Unbind();
         glDeleteBuffers(1, &_objectID);
     }
-
-    void VertexBuffer::Bind() const
-    {
-        glBindBuffer(GL_ARRAY_BUFFER, _objectID);
-    }
-
-    void VertexBuffer::Unbind() const
-    {
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
-    }
 } // T3D
