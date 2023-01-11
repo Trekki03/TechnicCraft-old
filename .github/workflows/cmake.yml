@@ -22,9 +22,6 @@ jobs:
     
     - name: Apt Get Update
       run: sudo apt-get update
-      
-    - name: install packages
-      run: sudo apt-get install glxinfo
     
     - name: X11
       run: glxinfo
