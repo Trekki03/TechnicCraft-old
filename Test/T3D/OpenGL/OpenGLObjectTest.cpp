@@ -30,7 +30,7 @@ protected:
         if (!window)
         {
             glfwTerminate();
-            EXPECT_TRUE(true);
+            EXPECT_TRUE(false);
         }
 
         /* Make the window's context current */
