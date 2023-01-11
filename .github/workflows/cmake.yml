@@ -24,7 +24,7 @@ jobs:
       uses: openrndr/setup-opengl@v1.1
     
     - name: Install RandR
-      run: sudo apt-get install xorg-dev libglu1-mesa-dev
+      run: sudo apt-get update && sudo apt-get install xorg-dev
       
 
     - name: Configure CMake
