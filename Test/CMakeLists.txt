@@ -2,7 +2,11 @@
 add_subdirectory(dependencies)
 
 
-add_executable(T3D_TEST T3D/OpenGL/OpenGLObjectTest.cpp)
+add_executable(T3D_TEST
+        T3D/openGlWrapperTests/openGlWrapperFixture.h
+        T3D/openGlWrapperTests/OpenGlWrapperFixture.cpp
+        T3D/openGlWrapperTests/VertexBufferTest.cpp
+)
 
 target_link_libraries(T3D_TEST PUBLIC gtest_main T3D)
 
