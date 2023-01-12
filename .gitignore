@@ -6,4 +6,4 @@ T3D/dependencies/glfw/*
 !T3D/dependencies/glfw/info.txt
 **/.DS_STORE
 /.idea/
-
+Documentation/html
