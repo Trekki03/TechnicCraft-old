@@ -13,6 +13,6 @@ jobs:
       - uses: DenverCoder1/doxygen-github-pages-action@v1.2.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branches: gh-pages
-          folder: Documentation/html
-          config_file: Documentation/Doxyfile
+          branch: gh-pages
+          folder: /home/runner/work/TechnicCraft/TechnicCraft/Documentation/html
+          config_file: /home/runner/work/TechnicCraft/TechnicCraft/Documentation/Doxyfile
