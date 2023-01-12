@@ -1,9 +1,0 @@
-/cmake-build-debug/
-/cmake-build-release/
-T3D/dependencies/glad/*
-T3D/dependencies/glfw/*
-!T3D/dependencies/glad/info.txt
-!T3D/dependencies/glfw/info.txt
-**/.DS_STORE
-/.idea/
-
