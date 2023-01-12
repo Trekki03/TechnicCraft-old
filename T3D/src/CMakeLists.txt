@@ -2,7 +2,7 @@ include_directories(T3D ${TechnicCraft_SOURCE_DIR}/T3D/include)
 
 add_library(
         T3D
-        openGlObjects/VertexBuffer.cpp
+        openGlWrapper/VertexBuffer.cpp
 
 )
 
