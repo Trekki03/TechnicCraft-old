@@ -1,7 +1,7 @@
 
-#include "openGlObjects/VertexBuffer.hpp"
+#include "T3D/openGlWrappper/VertexBuffer.hpp"
 
-namespace T3D
+namespace T3D::OpenGl
 {
     VertexBuffer::VertexBuffer(const void* dataArray, uint32_t size, GLenum usage)
     {
