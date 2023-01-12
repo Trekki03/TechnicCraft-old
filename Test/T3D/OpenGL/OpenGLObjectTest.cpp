@@ -51,7 +51,7 @@ TEST_F(T3D_OpenGlTEST, VertexBufferBinding)
     float vertexData[] = { 1.0f, 0.0f, 0.0f, 1.0f};
     T3D::VertexBuffer vb(vertexData, 4 * sizeof(float), GL_STATIC_DRAW);
 
-    //Creating vars to store ids. vb id has to be casted, because active buffer id is signed
+    //Creating vars to store ids. vb id has to be cast, because active buffer id is signed
     auto vbID = static_cast<int32_t>(vb.GetObjectId());
     int32_t activeBufferID;
 
@@ -64,4 +64,23 @@ TEST_F(T3D_OpenGlTEST, VertexBufferBinding)
     vb.Unbind();
     glGetIntegerv(GL_ARRAY_BUFFER_BINDING, &activeBufferID);
     EXPECT_NE(vbID, activeBufferID);
+}
+
+TEST_F(T3D_OpenGlTEST, VertexBufferData)
+{
+    //Creating and binding a Vertexbuffer to Test
+    float vertexData[] = { 1.0f, 0.0f, 0.0f, 1.0f};
+    T3D::VertexBuffer vb(vertexData, 4 * sizeof(float), GL_STATIC_DRAW);
+    vb.Bind();
+
+    //Getting data from Vertexbuffer
+    auto* bufferData = new float[4];
+    glGetBufferSubData(GL_ARRAY_BUFFER, 0, 4 * sizeof(float), bufferData);
+
+    //Testing if received data is equal to set data
+    for (int i = 0; i < 4; i++)
+    {
+        EXPECT_EQ(bufferData[i], vertexData[i]);
+    }
+    delete[] bufferData;
 }
