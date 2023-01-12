@@ -3,7 +3,7 @@
 
 #include <gtest/gtest.h>
 #include <glad/glad.h>
-#include <glfw/glfw3.h>
+#include <GLFW/glfw3.h>
 
 class T3D_OpenWrapperTest : public ::testing::Test
 {
