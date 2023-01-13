@@ -1,8 +1,7 @@
-
 #ifndef TECHNICCRAFT_VERTEXBUFFER_HPP
 #define TECHNICCRAFT_VERTEXBUFFER_HPP
 
-#include "OpenGlObject.hpp"
+#include "OpenGlBuffer.hpp"
 #include "glad/glad.h"
 
 namespace T3D::OpenGl
@@ -10,8 +9,14 @@ namespace T3D::OpenGl
     /**
      * A wrapper class for a OpenGL vertex buffer object.
      */
-    class VertexBuffer: public OpenGlObject
+    class VertexBuffer: public OpenGlBuffer
     {
+    private:
+        /**
+         * pointer to store data for output in (GetBufferData())
+         */
+        float* _data = nullptr;
+
     public:
         /**
          * Creates a new VBO. And sets its data.
@@ -20,12 +25,18 @@ namespace T3D::OpenGl
          * @param size Size of the data in bytes
          * @param usage A usage hint for OpenGL. See usage in https://docs.gl/gl3/glBufferData
          */
-        VertexBuffer(const void* dataArray, uint32_t size, GLenum usage);
+        VertexBuffer(const float* dataArray, uint32_t size, GLenum usage);
 
         /**
          * Unbinds and deletes the buffer on destruction
          */
         ~VertexBuffer();
+
+        /**
+         * Returns a pointer to the data stored in the buffer
+         * @return pointer to data. Should be casted to float*
+         */
+        [[nodiscard]] void* GetBufferData() override;
 
         /**
          * Activates the buffer
