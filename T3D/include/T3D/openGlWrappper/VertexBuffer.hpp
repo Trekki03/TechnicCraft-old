@@ -33,7 +33,7 @@ namespace T3D::OpenGl
         ~VertexBuffer();
 
         /**
-         * Returns a pointer to the data stored in the buffer
+         * Returns a pointer to the data stored in the buffer.
          * VBO is unbound after usage.
          * @return pointer to data. Should be casted to float*
          */
