@@ -34,6 +34,7 @@ namespace T3D::OpenGl
 
         /**
          * Returns a pointer to the data stored in the buffer
+         * VBO is unbound after usage.
          * @return pointer to data. Should be casted to float*
          */
         [[nodiscard]] void* GetBufferData() override;
