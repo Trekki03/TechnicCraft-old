@@ -3,7 +3,7 @@ include_directories(T3D ${TechnicCraft_SOURCE_DIR}/T3D/include)
 add_library(
         T3D
         openGlWrapper/VertexBuffer.cpp
-
+        openGlWrapper/IndexBuffer.cpp
 )
 
 target_include_directories(T3D PUBLIC ${TechnicCraft_SOURCE_DIR}/T3D/include)
