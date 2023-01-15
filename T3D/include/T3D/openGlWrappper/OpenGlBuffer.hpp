@@ -31,7 +31,7 @@ namespace T3D::OpenGl
          * Return the size of the buffer content.
          * @return buffer content size in byte.
          */
-        inline uint32_t GetBufferSize() const
+        [[nodiscard]] inline uint32_t GetBufferSize() const
         {
             return _bufferSize;
         }
@@ -40,7 +40,7 @@ namespace T3D::OpenGl
          * Return the data count in buffer.
          * @return buffer content count
          */
-        inline uint32_t GetBufferDataCount() const
+        [[nodiscard]] inline uint32_t GetBufferDataCount() const
         {
             return _bufferDataCount;
         }
