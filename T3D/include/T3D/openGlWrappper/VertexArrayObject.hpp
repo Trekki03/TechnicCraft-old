@@ -14,6 +14,14 @@ namespace T3D::OpenGl
         uint32_t _indexCount{};
 
     public:
+
+        VertexArrayObject() = default;
+
+        /**
+         * Unbinds and deletes VAO
+         */
+        ~VertexArrayObject();
+
         /**
          * Links an index buffer to the vao.
          * @param ib index buffer to be linked.
