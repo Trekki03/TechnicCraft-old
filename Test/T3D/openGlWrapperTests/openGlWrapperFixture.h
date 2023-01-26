@@ -5,7 +5,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-class T3D_OpenWrapperTest : public ::testing::Test
+class T3D_OpenGlWrapperTest : public ::testing::Test
 {
 protected:
     GLFWwindow* window;

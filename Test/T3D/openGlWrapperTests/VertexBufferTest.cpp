@@ -1,7 +1,7 @@
 #include "openGlWrapperFixture.h"
 #include <T3D/openGlWrappper/VertexBuffer.hpp>
 
-TEST_F(T3D_OpenWrapperTest, VertexBufferBinding)
+TEST_F(T3D_OpenGlWrapperTest, VertexBufferBinding)
 {
     //Creating a Vertexbuffer to Test
     float vertexData[] = {1.0f, 0.0f, 0.0f, 1.0f};
@@ -22,7 +22,7 @@ TEST_F(T3D_OpenWrapperTest, VertexBufferBinding)
     EXPECT_NE(vbID, activeBufferID);
 }
 
-TEST_F(T3D_OpenWrapperTest, VertexBufferData)
+TEST_F(T3D_OpenGlWrapperTest, VertexBufferData)
 {
     //Creating and binding a Vertexbuffer to Test
     float vertexData[] = {1.0f, 0.0f, 0.0f, 1.0f};

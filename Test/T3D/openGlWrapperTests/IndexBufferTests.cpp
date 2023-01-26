@@ -1,7 +1,7 @@
 #include "openGlWrapperFixture.h"
 #include "T3D/openGlWrappper/IndexBuffer.hpp"
 
-TEST_F(T3D_OpenWrapperTest, IndexBufferBinding)
+TEST_F(T3D_OpenGlWrapperTest, IndexBufferBinding)
 {
     //Creating a IndexBuffer to Test
     uint32_t indexData[] = {1, 5, 0, 56456};
@@ -22,7 +22,7 @@ TEST_F(T3D_OpenWrapperTest, IndexBufferBinding)
     EXPECT_NE(ibID, activeBufferID);
 }
 
-TEST_F(T3D_OpenWrapperTest, IndexBufferBufferData)
+TEST_F(T3D_OpenGlWrapperTest, IndexBufferBufferData)
 {
     //Creating and binding a IndexBuffer to Test
     uint32_t indexData[] = {1, 5, 0, 56456};
