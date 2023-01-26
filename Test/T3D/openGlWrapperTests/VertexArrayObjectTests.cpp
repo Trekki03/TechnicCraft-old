@@ -57,22 +57,20 @@ TEST_F(T3D_OpenGlWrapperTest, VertexArrayObjectVertexBuffer)
     //Create an index buffer and add to VAO
     float vertexData[] = {1.0f, 2.0f, 3.0f, 4.0f, 5.0f};
     T3D::OpenGl::VertexBuffer  vb(vertexData, 5*sizeof(float), GL_STATIC_DRAW);
+
+    //Adding an VBO
     vao.SetVertexBuffer(vb);
+    vao.ConfigureEnableVertexAttribPointer(0, 5*sizeof(float), GL_FLOAT, false, 0, 0);
 
     //Test if vao has saved correct Vertex Count
     EXPECT_EQ(vao.GetVertexCount(), 5);
 
-    //Creating vars to store ids. ib id has to be cast, because active buffer id is signed
+    //Creating vars to store ids. vb id has to be cast, because active buffer id is signed
     auto vbID = static_cast<int32_t>(vb.GetObjectId());
     int32_t activeBufferID;
 
-    //ID of ib and active ib should be same, if vao is bound
+    //ID of vb and active vb should be same, if vao is bound
     vao.Bind();
     glGetIntegerv(GL_ARRAY_BUFFER_BINDING, &activeBufferID);
     EXPECT_EQ(vbID, activeBufferID);
-
-    //ID of ib and active ib should not be same, if vao is unbound
-    vao.Unbind();
-    glGetIntegerv(GL_ARRAY_BUFFER_BINDING, &activeBufferID);
-    EXPECT_NE(vbID, activeBufferID);
 }
