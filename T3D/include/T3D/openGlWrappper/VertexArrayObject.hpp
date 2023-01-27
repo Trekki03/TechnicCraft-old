@@ -7,6 +7,9 @@
 
 namespace T3D::OpenGl
 {
+    /**
+     * A wrapper class for a OpenGL Vertex Array Object.
+     */
     class VertexArrayObject : public OpenGlObject
     {
     private:
@@ -15,7 +18,6 @@ namespace T3D::OpenGl
         VertexBuffer* _vb = nullptr;
 
     public:
-
         /**
          * Creates an OpenGL vao
          */
@@ -77,27 +79,39 @@ namespace T3D::OpenGl
         void DisableVertexAttribPointer(uint32_t index) const;
 
         /**
-         * Binds the VAO (and with that activates ib, vb and attribPointer)
+         * Binds the VAO and with that activates ib and vb (vb, only if at least one attribPointer is set)
          */
-        inline void Bind() const override { glBindVertexArray(_objectID); }
+        inline void Bind() const override
+        {
+            glBindVertexArray(_objectID);
+        }
 
         /**
-         * Unbinds the VAO (and with that deactivates ib, vb and attribPointer)
+         * Unbinds the VAO and with that deactivates ib. (vb is not unbound)
          */
-        inline void Unbind() const override { glBindVertexArray(0); }
+        inline void Unbind() const override
+        {
+            glBindVertexArray(0);
+        }
 
         /**
          * Returns the number of Vertices in the linked vertex buffer
          * @return number of vertices
          */
-        [[nodiscard]] inline uint32_t GetVertexCount() const { return _vertexCount; }
+        [[nodiscard]] inline uint32_t GetVertexCount() const
+        {
+            return _vertexCount;
+        }
 
         /**
          * Returns the number of indices in the linked index buffer.
          * normally the number of elements to be rendered in glDrawElements
          * @return number of indices
          */
-        [[nodiscard]] inline uint32_t GetIndexCount() const { return _indexCount; }
+        [[nodiscard]] inline uint32_t GetIndexCount() const
+        {
+            return _indexCount;
+        }
     };
 
 } // OpenGl
