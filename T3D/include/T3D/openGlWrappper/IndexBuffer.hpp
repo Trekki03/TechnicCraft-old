@@ -12,10 +12,7 @@ namespace T3D::OpenGl
     class IndexBuffer: public OpenGlBuffer
     {
     private:
-        /**
-         * pointer to store data for output in (GetBufferData())
-         */
-        uint32_t* _data = nullptr;
+        uint32_t* _data = nullptr; ///< pointer to store data for output in (GetBufferData())
 
     public:
         /**
