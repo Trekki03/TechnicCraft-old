@@ -14,27 +14,27 @@ namespace T3D::OpenGl
     class OpenGlObject
     {
     protected:
-        /**
-         * Member Var for saving the id of the created object.
-         */
-        uint32_t _objectID{};
+        uint32_t _objectID{}; ///< Member Var for saving the id of the created object.
+
     public:
-
         /**
-         * Implementation should activate the created object in OpenGL.
+         * Binds the OpenGlObject
          */
-
         virtual inline void Bind() const = 0;
-        /**
-         * Implementation should deactivate the created object in OpenGL.
-         */
 
+        /**
+         * Unbinds the OpenGlObject
+         */
         virtual inline void Unbind() const = 0;
+
         /**
          * Function to get OpenGL intern object ID.
          * @return The id of the OpenGL object.
          */
-        [[nodiscard]] inline uint32_t GetObjectId() const {return _objectID;}
+        [[nodiscard]] inline uint32_t GetObjectId() const
+        {
+            return _objectID;
+        }
     };
 
 } // T3D
