@@ -12,10 +12,7 @@ namespace T3D::OpenGl
     class VertexBuffer: public OpenGlBuffer
     {
     private:
-        /**
-         * pointer to store data for output in (GetBufferData())
-         */
-        float* _data = nullptr;
+        float* _data = nullptr; // pointer to store data for output in (GetBufferData())
 
     public:
         /**
@@ -33,14 +30,12 @@ namespace T3D::OpenGl
         ~VertexBuffer();
 
         /**
-         * Returns a pointer to the data stored in the buffer.
-         * VBO is unbound after usage.
-         * @return pointer to data. Should be casted to float*
+         * @copydoc T3D::OpenGl::OpenGlBuffer::GetBufferData()
          */
         [[nodiscard]] void* GetBufferData() override;
 
         /**
-         * Activates the buffer
+         * @copydoc T3D::OpenGl::OpenGlObject::Bind()
          */
         inline void Bind() const override
         {
@@ -48,7 +43,7 @@ namespace T3D::OpenGl
         }
 
         /**
-         * deactivates the buffer
+         * @copydoc T3D::OpenGl::OpenGlObject::Unbind()
          */
         inline void Unbind() const override
         {
