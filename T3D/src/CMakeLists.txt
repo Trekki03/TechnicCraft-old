@@ -5,7 +5,7 @@ add_library(
         openGlWrapper/VertexBuffer.cpp
         openGlWrapper/IndexBuffer.cpp
         openGlWrapper/VertexArrayObject.cpp
-)
+        openGlWrapper/Texture2D.cpp)
 
 target_include_directories(T3D PUBLIC ${TechnicCraft_SOURCE_DIR}/T3D/include)
 
