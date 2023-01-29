@@ -26,7 +26,7 @@ namespace T3D::OpenGl
          * <b>Usage Example</b>
          * @code Texture2D texture("res/textures/TextureAtlas.jpg", GL_RGB, GL_RGB, GL_REPEAT, GL_REPEAT, GL_LINEAR, GL_LINEAR, false) @endcode
          */
-        Texture2D(const char *texturePath, GLenum inputFormat, int internalFormat, int sAxisWarpMode, int tAxisWarpMode, int downscalingFilter, int upscalingFilter, bool mipmap);
+        Texture2D(const char *texturePath, GLenum inputFormat, GLenum internalFormat, GLenum sAxisWarpMode, GLenum tAxisWarpMode, GLenum downscalingFilter, GLenum upscalingFilter, bool mipmap);
 
         /**
          * Deletes the OpenGl texture
