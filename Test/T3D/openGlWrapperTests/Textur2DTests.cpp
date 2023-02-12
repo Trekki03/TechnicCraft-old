@@ -1,5 +1,5 @@
 #include "openGlWrapperFixture.h"
-#include "T3D/openGlWrappper/Texture2D.hpp"
+#include "T3D/openGlWrapper/Texture2D.hpp"
 
 TEST_F(T3D_OpenGlWrapperTest, Texture2DBinding)
 {

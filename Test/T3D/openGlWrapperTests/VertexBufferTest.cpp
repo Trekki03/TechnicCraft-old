@@ -1,5 +1,5 @@
 #include "openGlWrapperFixture.h"
-#include <T3D/openGlWrappper/VertexBuffer.hpp>
+#include <T3D/openGlWrapper/VertexBuffer.hpp>
 
 TEST_F(T3D_OpenGlWrapperTest, VertexBufferBinding)
 {

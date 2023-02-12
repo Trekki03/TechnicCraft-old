@@ -1,5 +1,5 @@
 #include "openGlWrapperFixture.h"
-#include "T3D/openGlWrappper/VertexArrayObject.hpp"
+#include "T3D/openGlWrapper/VertexArrayObject.hpp"
 
 TEST_F(T3D_OpenGlWrapperTest, VertexArrayObjectBinding)
 {

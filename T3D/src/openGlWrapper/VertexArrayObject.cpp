@@ -1,5 +1,5 @@
 #include <stdexcept>
-#include "T3D/openGlWrappper/VertexArrayObject.hpp"
+#include "T3D/openGlWrapper/VertexArrayObject.hpp"
 
 namespace T3D::OpenGl
 {

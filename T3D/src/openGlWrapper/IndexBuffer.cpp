@@ -1,4 +1,4 @@
-#include "T3D/openGlWrappper/IndexBuffer.hpp"
+#include "T3D/openGlWrapper/IndexBuffer.hpp"
 #include <iostream>
 
 namespace T3D::OpenGl

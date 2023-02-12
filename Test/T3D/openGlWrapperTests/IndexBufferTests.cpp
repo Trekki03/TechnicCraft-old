@@ -1,5 +1,5 @@
 #include "openGlWrapperFixture.h"
-#include "T3D/openGlWrappper/IndexBuffer.hpp"
+#include "T3D/openGlWrapper/IndexBuffer.hpp"
 
 TEST_F(T3D_OpenGlWrapperTest, IndexBufferBinding)
 {
