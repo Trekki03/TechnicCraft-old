@@ -9,6 +9,7 @@ add_executable(T3D_TEST
         T3D/openGlWrapperTests/IndexBufferTests.cpp
         T3D/openGlWrapperTests/VertexArrayObjectTests.cpp
         T3D/openGlWrapperTests/Textur2DTests.cpp
+        T3D/openGlWrapperTests/ShaderProgramTest.cpp
         )
 
 add_custom_target(
