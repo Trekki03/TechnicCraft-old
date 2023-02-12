@@ -46,12 +46,18 @@ namespace T3D::OpenGl
         /**
          * @copydoc T3D::OpenGl::OpenGlObject::Bind()
          */
-        void Bind() const override;
+        inline void Bind() const override
+        {
+            glBindTexture(GL_TEXTURE_2D, _objectID);
+        }
 
         /**
          * @copydoc T3D::OpenGl::OpenGlObject::Unbind()
          */
-        void Unbind() const override;
+        inline void Unbind() const override
+        {
+            glBindTexture(GL_TEXTURE_2D, 0);
+        }
     };
 }
 #endif //TECHNICCRAFT_TEXTURE2D_HPP

@@ -63,13 +63,4 @@ namespace T3D::OpenGl
         Bind();
         Unbind();
     }
-
-    void Texture2D::Bind() const
-    {
-        glBindTexture(GL_TEXTURE_2D, _objectID);
-    }
-    void Texture2D::Unbind() const
-    {
-        glBindTexture(GL_TEXTURE_2D, 0);
-    }
 }
