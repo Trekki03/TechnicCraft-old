@@ -1,6 +1,6 @@
 #include "openGlWrapperFixture.h"
 
-void T3D_OpenWrapperTest::SetUp()
+void T3D_OpenGlWrapperTest::SetUp()
 {
     /* Initialize the library */
     if (!glfwInit())
@@ -30,7 +30,7 @@ void T3D_OpenWrapperTest::SetUp()
     gladLoadGL();
 }
 
-void T3D_OpenWrapperTest::TearDown()
+void T3D_OpenGlWrapperTest::TearDown()
 {
     glfwTerminate();
 }
