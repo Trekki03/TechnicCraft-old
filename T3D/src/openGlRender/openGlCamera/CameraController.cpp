@@ -14,14 +14,16 @@ namespace T3D::OpenGlRender
 
     // Create / Remove Cameras
     // ------------------------------------------------------------------------------//
-    unsigned long long int CameraController::CreateCamera(glm::vec3 initialPosition, float initialPitch, float initialYaw, float initialFov)
+    uint64_t CameraController::CreateCamera(glm::vec3 initialPosition, float initialPitch, float initialYaw, float initialFov)
     {
         auto* newCamera = new Camera(initialPosition, initialPitch, initialYaw, initialFov);
         m_cameras.push_back(newCamera);
-        return newCamera->GetId();
+        uint32_t cameraID = newCamera->GetId();
+        SetActiveCamera(cameraID);
+        return cameraID;
     }
 
-    void CameraController::DeregisterCamera(unsigned long long int cameraID)
+    void CameraController::DeregisterCamera(uint64_t cameraID)
     {
         for(unsigned int i = 0; i < m_cameras.size(); i++)
         {
@@ -36,7 +38,7 @@ namespace T3D::OpenGlRender
     // ------------------------------------------------------------------------------//
 
     // Set active camera by ID
-    void CameraController::SetActiveCamera(unsigned long long int cameraID)
+    void CameraController::SetActiveCamera(uint64_t cameraID)
     {
         for(unsigned int i = 0; i < m_cameras.size(); i++)
         {
@@ -50,7 +52,7 @@ namespace T3D::OpenGlRender
     // Set active camera by index
     void CameraController::SetActiveCameraIndex(unsigned int index)
     {
-        // If set index is higher than the number of registered cameras. Than the index is set to the last camera.
+        // If set index is higher than the number of registered cameras. Then the index is set to the last camera.
         if (index > m_cameras.size())
         {
             m_activeCameraIndex = m_cameras.size();

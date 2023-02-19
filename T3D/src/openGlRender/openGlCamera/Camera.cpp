@@ -9,7 +9,7 @@ namespace T3D::OpenGlRender
    */
     Camera::Camera(glm::vec3 position, float pitch, float yaw, float fov) :
             m_pitch(pitch), m_yaw(yaw), m_fov(fov), m_xPos(position.x), m_yPos(position.y), m_zPos(position.z) {
-        m_cameraID = (unsigned long long int) this;
+        m_cameraID = reinterpret_cast<uint64_t>(this);
     }
 
     // Adding Functions
@@ -108,7 +108,7 @@ namespace T3D::OpenGlRender
     // Getter Functions
     // ------------------------------------------------------------------------------//
 
-    unsigned long long int Camera::GetId() const {
+    uint64_t Camera::GetId() const {
         return m_cameraID;
     }
 

@@ -13,7 +13,7 @@ namespace T3D::OpenGlRender
     {
 
     private:
-        uint32_t m_cameraID;
+        uint64_t m_cameraID;
         float m_pitch;
         float m_yaw;
         float m_fov;
@@ -141,7 +141,7 @@ namespace T3D::OpenGlRender
          * Returns the id of the camera
          * @return camera id
          */
-        [[nodiscard]] uint32_t GetId() const;
+        [[nodiscard]] uint64_t GetId() const;
 
         /**
          * Returns the current direction vector of the camera
