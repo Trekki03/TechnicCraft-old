@@ -6,8 +6,8 @@ bool wireMode = false;
 bool lastKeyState_V = false;
 bool firstMouse = true;
 
-extern float deltaTime;
-extern T3D::OpenGlRender::CameraController camController;
+/*extern*/ float deltaTime;
+/*extern*/ T3D::OpenGlRender::CameraController camController;
 
 
 namespace Game
