@@ -6,6 +6,8 @@ add_library(
         openGlWrapper/Texture2D.cpp
         openGlWrapper/ShaderProgram.cpp
         util/FileIO.cpp
+        openGlRender/openGlCamera/Camera.cpp
+        openGlRender/openGlCamera/CameraController.cpp
 )
 
 target_include_directories(
