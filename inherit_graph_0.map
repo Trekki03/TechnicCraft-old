@@ -1,4 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classT3D_1_1OpenGl_1_1OpenGlObject.html" title=" " alt="" coords="5,5,208,32"/>
-<area shape="rect" id="node2" href="$classT3D_1_1OpenGl_1_1VertexBuffer.html" title=" " alt="" coords="256,5,449,32"/>
+<area shape="rect" id="node1" href="$classT3D_1_1OpenGl_1_1OpenGlObject.html" title=" " alt="" coords="5,107,208,133"/>
+<area shape="rect" id="node2" href="$classT3D_1_1OpenGl_1_1OpenGlBuffer.html" title=" " alt="" coords="263,31,461,57"/>
+<area shape="rect" id="node5" href="$classT3D_1_1OpenGl_1_1ShaderProgram.html" title=" " alt="" coords="256,81,468,108"/>
+<area shape="rect" id="node6" href="$classT3D_1_1OpenGl_1_1Texture.html" title=" " alt="" coords="282,132,442,159"/>
+<area shape="rect" id="node8" href="$classT3D_1_1OpenGl_1_1VertexArrayObject.html" title=" " alt="" coords="267,183,457,225"/>
+<area shape="rect" id="node3" href="$classT3D_1_1OpenGl_1_1IndexBuffer.html" title=" " alt="" coords="519,5,706,32"/>
+<area shape="rect" id="node4" href="$classT3D_1_1OpenGl_1_1VertexBuffer.html" title=" " alt="" coords="516,56,709,83"/>
+<area shape="rect" id="node7" href="$classT3D_1_1OpenGl_1_1Texture2D.html" title=" " alt="" coords="523,132,702,159"/>
 </map>

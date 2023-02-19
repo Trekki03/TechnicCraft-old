@@ -97,8 +97,14 @@ Inheritance diagram for T3D::OpenGl::OpenGlObject:</div>
 <div class="dyncontent">
 <div class="center"><img src="classT3D_1_1OpenGl_1_1OpenGlObject__inherit__graph.png" border="0" usemap="#aT3D_1_1OpenGl_1_1OpenGlObject_inherit__map" alt="Inheritance graph"/></div>
 <map name="aT3D_1_1OpenGl_1_1OpenGlObject_inherit__map" id="aT3D_1_1OpenGl_1_1OpenGlObject_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,5,208,32"/>
-<area shape="rect" href="classT3D_1_1OpenGl_1_1VertexBuffer.html" title=" " alt="" coords="10,80,203,107"/>
+<area shape="rect" title=" " alt="" coords="5,107,208,133"/>
+<area shape="rect" href="classT3D_1_1OpenGl_1_1OpenGlBuffer.html" title=" " alt="" coords="263,31,461,57"/>
+<area shape="rect" href="classT3D_1_1OpenGl_1_1ShaderProgram.html" title=" " alt="" coords="256,81,468,108"/>
+<area shape="rect" href="classT3D_1_1OpenGl_1_1Texture.html" title=" " alt="" coords="282,132,442,159"/>
+<area shape="rect" href="classT3D_1_1OpenGl_1_1VertexArrayObject.html" title=" " alt="" coords="267,183,457,225"/>
+<area shape="rect" href="classT3D_1_1OpenGl_1_1IndexBuffer.html" title=" " alt="" coords="519,5,706,32"/>
+<area shape="rect" href="classT3D_1_1OpenGl_1_1VertexBuffer.html" title=" " alt="" coords="516,56,709,83"/>
+<area shape="rect" href="classT3D_1_1OpenGl_1_1Texture2D.html" title=" " alt="" coords="523,132,702,159"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -113,13 +119,15 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a1f699093cd6aa82d44851dbc0338bffa"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classT3D_1_1OpenGl_1_1OpenGlObject.html#a1f699093cd6aa82d44851dbc0338bffa">_objectID</a> {}</td></tr>
+<tr class="memitem:a1f699093cd6aa82d44851dbc0338bffa"><td class="memItemLeft" align="right" valign="top"><a id="a1f699093cd6aa82d44851dbc0338bffa"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classT3D_1_1OpenGl_1_1OpenGlObject.html#a1f699093cd6aa82d44851dbc0338bffa">_objectID</a> {}</td></tr>
+<tr class="memdesc:a1f699093cd6aa82d44851dbc0338bffa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member Var for saving the id of the created object. <br /></td></tr>
 <tr class="separator:a1f699093cd6aa82d44851dbc0338bffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for most OpenGL objects. Featuring an uint32_t to store the ID of the OpenGL object, a functions to retrieve this ID as well as pure virtual functions for binding and unbinding the object. </p>
 
-<p class="definition">Definition at line <a class="el" href="OpenGlObject_8hpp_source.html#l00015">15</a> of file <a class="el" href="OpenGlObject_8hpp_source.html">OpenGlObject.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="OpenGlObject_8hpp_source.html#l00014">14</a> of file <a class="el" href="OpenGlObject_8hpp_source.html">OpenGlObject.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad3ca48199bb4ea920672eb1f2f80691d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad3ca48199bb4ea920672eb1f2f80691d">&#9670;&nbsp;</a></span>Bind()</h2>
@@ -143,9 +151,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Implementation should activate the created object in OpenGL. </p>
+<p>Binds the <a class="el" href="classT3D_1_1OpenGl_1_1OpenGlObject.html">OpenGlObject</a> </p>
 
-<p>Implemented in <a class="el" href="classT3D_1_1OpenGl_1_1VertexBuffer.html#a4219364890b6f7d7013cdc8140d0719d">T3D::OpenGl::VertexBuffer</a>.</p>
+<p>Implemented in <a class="el" href="classT3D_1_1OpenGl_1_1VertexBuffer.html#a4219364890b6f7d7013cdc8140d0719d">T3D::OpenGl::VertexBuffer</a>, <a class="el" href="classT3D_1_1OpenGl_1_1VertexArrayObject.html#a0174a4e33ad0f31998e32df205e51637">T3D::OpenGl::VertexArrayObject</a>, <a class="el" href="classT3D_1_1OpenGl_1_1Texture2D.html#a29022f41d5dd0f3807142986166abb1f">T3D::OpenGl::Texture2D</a>, <a class="el" href="classT3D_1_1OpenGl_1_1ShaderProgram.html#a1f169a23e694c04e5c59b0dd274f16e6">T3D::OpenGl::ShaderProgram</a>, and <a class="el" href="classT3D_1_1OpenGl_1_1IndexBuffer.html#ab5e5e2336a16fe03bc8e6414ac1aafc5">T3D::OpenGl::IndexBuffer</a>.</p>
 
 </div>
 </div>
@@ -173,7 +181,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Function to get OpenGL intern object ID. </p><dl class="section return"><dt>Returns</dt><dd>The id of the OpenGL object. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="OpenGlObject_8hpp_source.html#l00038">38</a> of file <a class="el" href="OpenGlObject_8hpp_source.html">OpenGlObject.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="OpenGlObject_8hpp_source.html#l00034">34</a> of file <a class="el" href="OpenGlObject_8hpp_source.html">OpenGlObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -199,40 +207,14 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Implementation should deactivate the created object in OpenGL. </p>
+<p>Unbinds the <a class="el" href="classT3D_1_1OpenGl_1_1OpenGlObject.html">OpenGlObject</a> </p>
 
-<p>Implemented in <a class="el" href="classT3D_1_1OpenGl_1_1VertexBuffer.html#ac05f37806af98fabc2a8fdb5f1541ba0">T3D::OpenGl::VertexBuffer</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a1f699093cd6aa82d44851dbc0338bffa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f699093cd6aa82d44851dbc0338bffa">&#9670;&nbsp;</a></span>_objectID</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t T3D::OpenGl::OpenGlObject::_objectID {}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Member Var for saving the id of the created object. </p>
-
-<p class="definition">Definition at line <a class="el" href="OpenGlObject_8hpp_source.html#l00021">21</a> of file <a class="el" href="OpenGlObject_8hpp_source.html">OpenGlObject.hpp</a>.</p>
+<p>Implemented in <a class="el" href="classT3D_1_1OpenGl_1_1VertexBuffer.html#ac05f37806af98fabc2a8fdb5f1541ba0">T3D::OpenGl::VertexBuffer</a>, <a class="el" href="classT3D_1_1OpenGl_1_1VertexArrayObject.html#a1e1ffb0914e80e4c75c7a4821f928c85">T3D::OpenGl::VertexArrayObject</a>, <a class="el" href="classT3D_1_1OpenGl_1_1Texture2D.html#a853397dcf8a8d7604bc5ee2660048d30">T3D::OpenGl::Texture2D</a>, <a class="el" href="classT3D_1_1OpenGl_1_1ShaderProgram.html#a67da1273e4828a04ca419a1f7f3defa3">T3D::OpenGl::ShaderProgram</a>, and <a class="el" href="classT3D_1_1OpenGl_1_1IndexBuffer.html#a2d106ccc8a5de430cd1da58f5669f596">T3D::OpenGl::IndexBuffer</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>T3D/include/T3D/openGlWrappper/<a class="el" href="OpenGlObject_8hpp_source.html">OpenGlObject.hpp</a></li>
+<li>T3D/include/T3D/openGlWrapper/<a class="el" href="OpenGlObject_8hpp_source.html">OpenGlObject.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

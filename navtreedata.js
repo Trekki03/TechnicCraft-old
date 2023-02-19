@@ -43,7 +43,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"OpenGlObject_8hpp_source.html"
+"CameraController_8cpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

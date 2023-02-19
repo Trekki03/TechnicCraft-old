@@ -1,8 +1,8 @@
 var indexSectionsWithContent =
 {
-  0: "_bgouv~",
-  1: "ov",
-  2: "bguv~",
+  0: "_abcdegiostuv~",
+  1: "ciostv",
+  2: "abcdegistuv~",
   3: "_"
 };
 
