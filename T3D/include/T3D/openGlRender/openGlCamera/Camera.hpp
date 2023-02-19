@@ -11,7 +11,6 @@ namespace T3D::OpenGlRender
      */
     class Camera
     {
-
     private:
         uint64_t m_cameraID;
         float m_pitch;
