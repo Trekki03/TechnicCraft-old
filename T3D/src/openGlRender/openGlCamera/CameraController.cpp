@@ -1,4 +1,4 @@
-#include "CameraController.hpp"
+#include "T3D/openGlRender/openGlCamera/CameraController.hpp"
 
 namespace T3D::OpenGlRender
 {

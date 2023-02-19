@@ -1,7 +1,7 @@
 #ifndef TECHNICCRAFT_CAMERACONTROLLER_HPP
 #define TECHNICCRAFT_CAMERACONTROLLER_HPP
 
-#include <vector>
+#include "../../../../../../../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/vector"
 #include "Camera.hpp"
 
 namespace T3D::OpenGlRender

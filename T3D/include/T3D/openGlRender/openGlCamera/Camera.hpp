@@ -1,7 +1,7 @@
 #ifndef TECHNICCRAFT_CAMERA_HPP
 #define TECHNICCRAFT_CAMERA_HPP
 
-#include "glm/glm.hpp"
+#include "../../../../../cmake-build-debug/T3D/dependencies/glm/glm/glm.hpp"
 
 namespace T3D::OpenGlRender
 {
