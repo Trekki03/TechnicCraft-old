@@ -8,3 +8,5 @@ T3D/dependencies/glfw/*
 /.idea/
 
 Documentation/html
+/Documentation/Local Doxyfile.bak
+/LocalDoc/html/
