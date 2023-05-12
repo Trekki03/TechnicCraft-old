@@ -5,7 +5,7 @@ TEST_F(T3D_OpenGlWrapperTest, ShaderBinding)
 {
     using namespace T3D::OpenGl;
 
-    ShaderProgram shader("res/shader/VertexShader.vert", "res/shader/FragmentShader.frag");
+    ShaderProgram shader("Test/res/shader/VertexShader.vert", "Test/res/shader/FragmentShader.frag");
 
     int32_t shaderProgramID = static_cast<int32_t>(shader.GetObjectId());
     int32_t activeShaderProgramID;
