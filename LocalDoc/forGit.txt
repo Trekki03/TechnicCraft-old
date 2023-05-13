@@ -1,0 +1,1 @@
+Empty File, so git copies the empty dir.

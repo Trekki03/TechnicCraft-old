@@ -1,10 +1,14 @@
 /cmake-build-debug/
 /cmake-build-release/
+/out/
 T3D/dependencies/glad/*
 T3D/dependencies/glfw/*
 !T3D/dependencies/glad/info.txt
 !T3D/dependencies/glfw/info.txt
 **/.DS_STORE
 /.idea/
+/.vs/
 
 Documentation/html
+/Documentation/Local Doxyfile.bak
+/LocalDoc/html/
