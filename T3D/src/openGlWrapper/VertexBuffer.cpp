@@ -1,6 +1,6 @@
 #include "T3D/openGlWrapper/VertexBuffer.hpp"
 
-namespace T3D::OpenGl
+namespace t3d::openGl
 {
     VertexBuffer::VertexBuffer(const float* dataArray, uint32_t size, GLenum usage)
     {

@@ -5,7 +5,7 @@ TEST_F(T3D_OpenGlWrapperTest, IndexBufferBinding)
 {
     //Creating a IndexBuffer to Test
     uint32_t indexData[] = {1, 5, 0, 56456};
-    T3D::OpenGl::IndexBuffer ib(indexData, 4 * sizeof(uint32_t), GL_STATIC_DRAW);
+    t3d::openGl::IndexBuffer ib(indexData, 4 * sizeof(uint32_t), GL_STATIC_DRAW);
 
     //Creating vars to store ids. ib id has to be cast, because active buffer id is signed
     auto ibID = static_cast<int32_t>(ib.GetObjectId());
@@ -26,7 +26,7 @@ TEST_F(T3D_OpenGlWrapperTest, IndexBufferBufferData)
 {
     //Creating and binding a IndexBuffer to Test
     uint32_t indexData[] = {1, 5, 0, 56456};
-    T3D::OpenGl::IndexBuffer ib(indexData, 4 * sizeof(uint32_t), GL_STATIC_DRAW);
+    t3d::openGl::IndexBuffer ib(indexData, 4 * sizeof(uint32_t), GL_STATIC_DRAW);
     ib.Bind();
 
     //Getting data from IndexBuffer

@@ -5,7 +5,7 @@
 #include <glm/glm.hpp>
 #include "OpenGlObject.hpp"
 
-namespace T3D::OpenGl
+namespace t3d::openGl
 {
     /**
      * A wrapper class for a OpenGL shader program object.

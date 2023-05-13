@@ -4,7 +4,7 @@
 #include <vector>
 #include "Camera.hpp"
 
-namespace T3D::OpenGlRender
+namespace t3d::openGlRender
 {
     /**
      * A simple camera controller class. It creates and manages multiple cameras.
@@ -12,8 +12,8 @@ namespace T3D::OpenGlRender
     class CameraController
     {
     private:
-        unsigned int m_activeCameraIndex = 0;
-        std::vector<Camera*> m_cameras;
+        unsigned int _activeCameraIndex = 0;
+        std::vector<Camera*> _cameras;
 
     public:
         /**

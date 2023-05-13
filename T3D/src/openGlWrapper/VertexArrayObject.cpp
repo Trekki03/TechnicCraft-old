@@ -1,7 +1,7 @@
 #include <stdexcept>
 #include "T3D/openGlWrapper/VertexArrayObject.hpp"
 
-namespace T3D::OpenGl
+namespace t3d::openGl
 {
     VertexArrayObject::VertexArrayObject()
     {

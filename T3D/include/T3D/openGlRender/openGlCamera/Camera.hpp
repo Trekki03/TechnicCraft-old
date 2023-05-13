@@ -3,7 +3,7 @@
 
 #include "glm/glm.hpp"
 
-namespace T3D::OpenGlRender
+namespace t3d::openGlRender
 {
     /**
      * A simple Camera class. The Camera safes changeable position and
@@ -12,13 +12,13 @@ namespace T3D::OpenGlRender
     class Camera
     {
     private:
-        uint64_t m_cameraID;
-        float m_pitch;
-        float m_yaw;
-        float m_fov;
-        float m_xPos;
-        float m_yPos;
-        float m_zPos;
+        uint64_t _cameraID;
+        float _pitch;
+        float _yaw;
+        float _fov;
+        float _xPos;
+        float _yPos;
+        float _zPos;
 
     public:
         /**

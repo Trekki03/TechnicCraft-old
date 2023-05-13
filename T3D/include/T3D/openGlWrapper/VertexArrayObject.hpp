@@ -5,7 +5,7 @@
 #include "VertexBuffer.hpp"
 #include "IndexBuffer.hpp"
 
-namespace T3D::OpenGl
+namespace t3d::openGl
 {
     /**
      * A wrapper class for a OpenGL Vertex Array Object.

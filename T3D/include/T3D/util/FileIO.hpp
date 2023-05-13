@@ -2,7 +2,7 @@
 #define TECHNICCRAFT_FILEIO_HPP
 
 #include <string>
-namespace T3D::Util
+namespace t3d::util
 {
     std::string GetStringFromFile(const char* path);
 }
