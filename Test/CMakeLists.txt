@@ -2,7 +2,7 @@
 add_subdirectory(dependencies)
 
 
-add_executable(T3D_TEST
+add_executable(OpenGlWrapperTests
         T3D/openGlWrapperTests/openGlWrapperFixture.h
         T3D/openGlWrapperTests/OpenGlWrapperFixture.cpp
         T3D/openGlWrapperTests/VertexBufferTest.cpp
@@ -12,6 +12,9 @@ add_executable(T3D_TEST
         T3D/openGlWrapperTests/ShaderProgramTest.cpp
         )
 
+add_executable(OpenGlRenderTests
+        T3D/OpenGlRenderTests/CameraTests.cpp
+)
 add_custom_target(
         copy-files-test ALL
         COMMAND ${CMAKE_COMMAND} -E copy_directory
@@ -21,7 +24,9 @@ add_custom_target(
 add_dependencies(T3D copy-files-test)
 
 
-target_link_libraries(T3D_TEST PUBLIC gtest_main T3D)
+target_link_libraries(OpenGlWrapperTests PUBLIC gtest_main T3D)
+target_link_libraries(OpenGlRenderTests PUBLIC gtest_main T3D)
 
-add_test(NAME T3D_TEST COMMAND T3D_TEST)
+add_test(NAME OpenGlWrapperTests COMMAND OpenGlWrapperTests)
+add_test(NAME OpenGlRenderTests COMMAND OpenGlRenderTests)
 
