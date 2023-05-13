@@ -8,6 +8,8 @@ add_library(
         util/FileIO.cpp
         openGlRender/openGlCamera/Camera.cpp
         openGlRender/openGlCamera/CameraController.cpp
+        glfw/inputHandling/KeyProcessing.cpp 
+        glfw/windowHandling/windowProcessing.cpp
 )
 
 target_include_directories(
