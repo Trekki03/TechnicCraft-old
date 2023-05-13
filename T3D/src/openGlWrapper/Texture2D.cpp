@@ -6,7 +6,7 @@
 
 using namespace std::string_literals;
 
-namespace T3D::OpenGl
+namespace t3d::openGl
 {
     Texture2D::Texture2D(const char *texturePath, GLenum inputFormat, GLenum internalFormat, GLenum sAxisWarpMode,
                          GLenum tAxisWarpMode, GLenum downscalingFilter, GLenum upscalingFilter, bool mipmap)

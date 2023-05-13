@@ -4,7 +4,7 @@
 TEST_F(T3D_OpenGlWrapperTest, VertexArrayObjectBinding)
 {
     //Create a VertexArrayObject to test
-    T3D::OpenGl::VertexArrayObject vao {};
+    t3d::openGl::VertexArrayObject vao {};
 
     //Creating vars to store ids. vao id has to be cast, because active vao id is signed
     auto vaoID = static_cast<int32_t>(vao.GetObjectId());
@@ -24,11 +24,11 @@ TEST_F(T3D_OpenGlWrapperTest, VertexArrayObjectBinding)
 TEST_F(T3D_OpenGlWrapperTest, VertexArrayObjectIndexBuffer)
 {
     //Create a VertexArrayObject to test
-    T3D::OpenGl::VertexArrayObject vao {};
+    t3d::openGl::VertexArrayObject vao {};
 
     //Create an index buffer and add to VAO
     uint32_t indexData[] = {1, 2, 3, 4};
-    T3D::OpenGl::IndexBuffer ib(indexData, 4*sizeof(uint32_t), GL_STATIC_DRAW);
+    t3d::openGl::IndexBuffer ib(indexData, 4*sizeof(uint32_t), GL_STATIC_DRAW);
     vao.SetIndexBuffer(ib);
 
     //Test if vao has saved correct Index Count
@@ -52,11 +52,11 @@ TEST_F(T3D_OpenGlWrapperTest, VertexArrayObjectIndexBuffer)
 TEST_F(T3D_OpenGlWrapperTest, VertexArrayObjectVertexBuffer)
 {
     //Create a VertexArrayObject to test
-    T3D::OpenGl::VertexArrayObject vao {};
+    t3d::openGl::VertexArrayObject vao {};
 
     //Create an index buffer and add to VAO
     float vertexData[] = {1.0f, 2.0f, 3.0f, 4.0f, 5.0f};
-    T3D::OpenGl::VertexBuffer  vb(vertexData, 5*sizeof(float), GL_STATIC_DRAW);
+    t3d::openGl::VertexBuffer  vb(vertexData, 5*sizeof(float), GL_STATIC_DRAW);
 
     //Adding an VBO
     vao.SetVertexBuffer(vb);

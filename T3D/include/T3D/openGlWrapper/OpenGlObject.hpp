@@ -3,7 +3,7 @@
 
 #include <cstdint>
 
-namespace T3D::OpenGl
+namespace t3d::openGl
 {
     /**
      *  Base class for most OpenGL objects.

@@ -1,7 +1,7 @@
 #include "T3D/openGlWrapper/IndexBuffer.hpp"
 #include <iostream>
 
-namespace T3D::OpenGl
+namespace t3d::openGl
 {
     IndexBuffer::IndexBuffer(const uint32_t* dataArray, uint32_t size, GLenum usage)
     {

@@ -1,7 +1,7 @@
 #include "T3D/util/FileIO.hpp"
 #include <fstream>
 
-namespace T3D::Util
+namespace t3d::util
 {
     std::string GetStringFromFile(const char* path)
     {

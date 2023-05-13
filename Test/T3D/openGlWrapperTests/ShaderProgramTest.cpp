@@ -3,7 +3,7 @@
 
 TEST_F(T3D_OpenGlWrapperTest, ShaderBinding)
 {
-    using namespace T3D::OpenGl;
+    using namespace t3d::openGl;
 
     ShaderProgram shader("res/shader/VertexShader.vert", "res/shader/FragmentShader.frag");
 

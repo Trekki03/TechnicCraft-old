@@ -1,6 +1,6 @@
 #include "T3D/openGlRender/openGlCamera/Camera.hpp"
 
-namespace T3D::OpenGlRender
+namespace t3d::openGlRender
 {
     /*
     * Initialize members and gives CameraID and value corresponding to the address of the pointer.
@@ -8,9 +8,9 @@ namespace T3D::OpenGlRender
     * same address, as long as this instance exists.
     */
     Camera::Camera(glm::vec3 position, float pitch, float yaw, float fov) :
-            m_pitch(pitch), m_yaw(yaw), m_fov(fov), m_xPos(position.x), m_yPos(position.y), m_zPos(position.z)
+            _pitch(pitch), _yaw(yaw), _fov(fov), _xPos(position.x), _yPos(position.y), _zPos(position.z)
     {
-        m_cameraID = reinterpret_cast<uint64_t>(this);
+        _cameraID = reinterpret_cast<uint64_t>(this);
     }
 
 
@@ -19,7 +19,7 @@ namespace T3D::OpenGlRender
 
     void Camera::AddFov(float fov)
     {
-        float newFov = m_fov + fov;
+        float newFov = _fov + fov;
 
         // FOV has to be between 1.0 and 45.0
         if (newFov < 1.0f)
@@ -31,12 +31,12 @@ namespace T3D::OpenGlRender
             newFov = 45.0f;
         }
 
-        m_fov = newFov;
+        _fov = newFov;
     }
 
     void Camera::AddPitch(float pitch)
     {
-        float newPitch = m_pitch + pitch;
+        float newPitch = _pitch + pitch;
 
         // FOV has to be between -89.0 and 89.0
         if (newPitch > 89.0f)
@@ -48,34 +48,34 @@ namespace T3D::OpenGlRender
             newPitch = -89.0f;
         }
 
-        m_pitch = newPitch;
+        _pitch = newPitch;
     }
 
     void Camera::AddYaw(float yaw)
     {
-        m_yaw += yaw;
+        _yaw += yaw;
     }
 
     void Camera::AddXPos(float xPos)
     {
-        m_xPos += xPos;
+        _xPos += xPos;
     }
 
     void Camera::AddYPos(float yPos)
     {
-        m_yPos += yPos;
+        _yPos += yPos;
     }
 
     void Camera::AddZPos(float zPos)
     {
-        m_zPos += zPos;
+        _zPos += zPos;
     }
 
     void Camera::AddPositionVector(glm::vec3 position)
     {
-        m_xPos += position.x;
-        m_yPos += position.y;
-        m_zPos += position.z;
+        _xPos += position.x;
+        _yPos += position.y;
+        _zPos += position.z;
     }
 
     // Setter Functions
@@ -95,7 +95,7 @@ namespace T3D::OpenGlRender
             newFov = 45.0f;
         }
 
-        m_fov = newFov;
+        _fov = newFov;
     }
 
     void Camera::SetPitch(float pitch)
@@ -112,34 +112,34 @@ namespace T3D::OpenGlRender
             newPitch = -89.0f;
         }
 
-        m_pitch = newPitch;
+        _pitch = newPitch;
     }
 
     void Camera::SetYaw(float yaw)
     {
-        m_yaw = yaw;
+        _yaw = yaw;
     }
 
     void Camera::SetXPos(float xPos)
     {
-        m_xPos = xPos;
+        _xPos = xPos;
     }
 
     void Camera::SetYPos(float yPos)
     {
-        m_yPos = yPos;
+        _yPos = yPos;
     }
 
     void Camera::SetZPos(float zPos)
     {
-        m_zPos = zPos;
+        _zPos = zPos;
     }
 
     void Camera::SetPositionVector(glm::vec3 position)
     {
-        m_xPos = position.x;
-        m_yPos = position.y;
-        m_zPos = position.z;
+        _xPos = position.x;
+        _yPos = position.y;
+        _zPos = position.z;
     }
 
     // Getter Functions
@@ -147,35 +147,35 @@ namespace T3D::OpenGlRender
 
     uint64_t Camera::GetId() const
     {
-        return m_cameraID;
+        return _cameraID;
     }
 
     float Camera::GetFov() const
     {
-        return m_fov;
+        return _fov;
     }
 
     float Camera::GetYaw() const
     {
-        return m_yaw;
+        return _yaw;
     }
 
     float Camera::GetPitch() const
     {
-        return m_pitch;
+        return _pitch;
     }
 
     glm::vec3 Camera::GetDirectionVector() const
     {
         glm::vec3 direction;
-        direction.x = cosf(glm::radians(m_yaw)) * cosf(glm::radians(m_pitch));
-        direction.y = sinf(glm::radians(m_pitch));
-        direction.z = sinf(glm::radians(m_yaw)) * cosf(glm::radians(m_pitch));
+        direction.x = cosf(glm::radians(_yaw)) * cosf(glm::radians(_pitch));
+        direction.y = sinf(glm::radians(_pitch));
+        direction.z = sinf(glm::radians(_yaw)) * cosf(glm::radians(_pitch));
         return glm::normalize(direction);
     }
 
     glm::vec3 Camera::GetPositionVector() const
     {
-        return {m_xPos, m_yPos, m_zPos};
+        return {_xPos, _yPos, _zPos};
     }
 }

@@ -4,7 +4,7 @@
 #include "Texture.hpp"
 #include "glad/glad.h"
 
-namespace T3D::OpenGl
+namespace t3d::openGl
 {
     /**
      * A wrapper class for a OpenGL texture object.

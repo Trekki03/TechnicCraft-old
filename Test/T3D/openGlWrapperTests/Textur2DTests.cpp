@@ -5,7 +5,7 @@ TEST_F(T3D_OpenGlWrapperTest, Texture2DBinding)
 {
     // Creating a Texture. Path relative to ${CMAKE_BINARY_DIR}/Test
     const char* texPath = "res/img/TextureTest.jpg";
-    T3D::OpenGl::Texture2D texture(texPath, GL_RGB, GL_RGB, GL_REPEAT, GL_REPEAT, GL_NEAREST, GL_NEAREST, false);
+    t3d::openGl::Texture2D texture(texPath, GL_RGB, GL_RGB, GL_REPEAT, GL_REPEAT, GL_NEAREST, GL_NEAREST, false);
 
     // Creating vars to store ids. textureID has to be cast, because activeTextureID is signed
     auto textureID = static_cast<int32_t>(texture.GetObjectId());

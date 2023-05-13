@@ -4,13 +4,13 @@
 #include <iostream>
 #include <string>
 
-namespace T3D::OpenGl
+namespace t3d::openGl
 {
 // CONSTRUCTOR / DESTRUCTOR
     ShaderProgram::ShaderProgram(const char* vertexShaderPath, const char* fragmentShaderPath)
     {
-        std::string vertexShaderSource = T3D::Util::GetStringFromFile(vertexShaderPath);
-        std::string fragmentShaderSource = T3D::Util::GetStringFromFile(fragmentShaderPath);
+        std::string vertexShaderSource = t3d::util::GetStringFromFile(vertexShaderPath);
+        std::string fragmentShaderSource = t3d::util::GetStringFromFile(fragmentShaderPath);
 
         _objectID = glCreateProgram();
 

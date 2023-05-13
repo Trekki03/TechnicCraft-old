@@ -5,7 +5,7 @@ TEST_F(T3D_OpenGlWrapperTest, VertexBufferBinding)
 {
     //Creating a Vertexbuffer to Test
     float vertexData[] = {1.0f, 0.0f, 0.0f, 1.0f};
-    T3D::OpenGl::VertexBuffer vb(vertexData, 4 * sizeof(float), GL_STATIC_DRAW);
+    t3d::openGl::VertexBuffer vb(vertexData, 4 * sizeof(float), GL_STATIC_DRAW);
 
     //Creating vars to store ids. vb id has to be cast, because active buffer id is signed
     auto vbID = static_cast<int32_t>(vb.GetObjectId());
@@ -26,7 +26,7 @@ TEST_F(T3D_OpenGlWrapperTest, VertexBufferData)
 {
     //Creating and binding a Vertexbuffer to Test
     float vertexData[] = {1.0f, 0.0f, 0.0f, 1.0f};
-    T3D::OpenGl::VertexBuffer vb(vertexData, 4 * sizeof(float), GL_STATIC_DRAW);
+    t3d::openGl::VertexBuffer vb(vertexData, 4 * sizeof(float), GL_STATIC_DRAW);
     vb.Bind();
 
     //Getting data from Vertexbuffer

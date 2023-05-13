@@ -4,7 +4,7 @@
 #include "OpenGlObject.hpp"
 #include <cstdint>
 
-namespace T3D::OpenGl
+namespace t3d::openGl
 {
     /**
      *  Base class for OpenGL buffers.
